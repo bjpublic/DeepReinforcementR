@@ -1,6 +1,7 @@
 
 
 
+
 # install.packages("deepnet")
 library(deepnet)
 deepnet::nn.train
@@ -14,7 +15,7 @@ relu<-function(x){
 ##network feedforward
 
 nn.ff2<-function (nn, batch_x) 
-
+  
 {
   
   m <- nrow(batch_x)
@@ -98,7 +99,7 @@ nn.ff2<-function (nn, batch_x)
                      
                      nn$B[[i - 1]])
   
-
+  
   
   
   if (nn$output == "sigm") {
@@ -380,7 +381,7 @@ state_size <-ncol(stm)*nrow(stm)
              hidden_dropout = hidden_dropout, visible_dropout = visible_dropout, 
              output = output, W = W, vW = vW, B = B, vB = vB)
   
-
+  
   #### target network
   target_qn<-qn1
   
